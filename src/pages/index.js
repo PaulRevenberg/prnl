@@ -1,5 +1,6 @@
 import * as React from "react";
 import Landing from "../components/landing.js";
+import Gallery from "../components/gallery.js";
 
 const IndexPage = () => {
   return (
@@ -28,8 +29,8 @@ const IndexPage = () => {
           <div className="fake-img rounded-tl-md md:rounded-tr-none"></div>
         </div>
       </div> */}
-      <div className="h-screen snap-start snap-always grid-cols-2 bg-neutral-800 font-bold text-neutral-200 sm:grid">
-        Dave
+      <div className="h-screen snap-start snap-always justify-center bg-neutral-800 p-4 font-bold text-neutral-200">
+        <Gallery />
       </div>
     </main>
   );
