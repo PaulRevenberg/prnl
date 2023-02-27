@@ -3,8 +3,9 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `My Gatsby Site`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `Paul Revenberg | Developer`,
+    siteUrl: `https://www.paulrevenberg.nl`,
+    description: "Paul Revenberg | Developer | Photo gallery",
   },
   plugins: [
     "gatsby-plugin-sass",
@@ -12,7 +13,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "Paul Revenberg",
+        name: "Paul Revenberg | Developer",
         short_name: "Paul",
         start_url: "/",
         background_color: "#FAFAFA",
@@ -25,6 +26,14 @@ module.exports = {
         // If you do not provide a crossOrigin option, it will skip CORS for manifest.
         // Any invalid keyword or empty string defaults to `anonymous`
         crossOrigin: `use-credentials`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: "www.paulrevenberg.nl",
+        region: "eu-central-1",
+        acl: null,
       },
     },
   ],

@@ -1,10 +1,11 @@
 import * as React from "react";
 import Landing from "../components/landing.js";
 import Gallery from "../components/gallery.js";
+import SEO from "../components/seo.js";
 
 const IndexPage = () => {
   return (
-    <main className="h-screen snap-y snap-mandatory overflow-y-scroll">
+    <main className="h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth">
       <Landing />
       {/* <div className="h-screen snap-start snap-always gap-4 bg-neutral-50 md:flex portrait:bg-red-100 landscape:flex">
         <div className="px-auto flex h-1/2 min-w-[33%] flex-grow flex-col items-center justify-center sm:flex-row md:h-full">
@@ -29,13 +30,16 @@ const IndexPage = () => {
           <div className="fake-img rounded-tl-md md:rounded-tr-none"></div>
         </div>
       </div> */}
-      <div className="h-screen snap-start snap-always justify-center bg-neutral-800 p-4 font-bold text-neutral-200">
+      {/* <div
+        id="gallery"
+        className="h-screen snap-start snap-always justify-center bg-neutral-800 p-4 font-bold text-neutral-200"
+      >
         <Gallery />
-      </div>
+      </div> */}
     </main>
   );
 };
 
 export default IndexPage;
 
-export const Head = () => <title>Paul Revenberg</title>;
+export const Head = () => <SEO />;

@@ -12,7 +12,8 @@
     "start": "gatsby develop -H 0.0.0.0",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "deploy": "gatsby-plugin-s3 deploy"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
@@ -21,11 +22,16 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "gatsby": "^5.4.0",
     "gatsby-plugin-manifest": "^5.4.0",
+    "gatsby-plugin-s3": "^0.3.8",
     "gatsby-plugin-sass": "^6.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-photo-album": "^2.0.1",
     "sass": "^1.57.1",
+    "sqip": "^1.0.0-alpha.38",
+    "sqip-plugin-data-uri": "^1.0.0-alpha.39",
+    "sqip-plugin-primitive": "^1.0.0-alpha.40",
+    "sqip-plugin-svgo": "^1.0.0-alpha.40",
     "yet-another-react-lightbox": "^2.3.1"
   },
   "devDependencies": {
