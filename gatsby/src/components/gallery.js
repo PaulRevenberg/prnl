@@ -2,6 +2,7 @@ import * as React from "react";
 import { PhotoAlbum } from "react-photo-album";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
+import PhotoData from "../data/gallery.json";
 
 // import optional lightbox plugins
 import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
@@ -29,52 +30,6 @@ import "yet-another-react-lightbox/plugins/thumbnails.css";
 //     height,
 //   };
 // });
-
-const photos = [
-  { src: "DSC_3082.jpg", svg: "DSC_3082.svg", width: 6048, height: 3402 },
-  { src: "DSC_3094.jpg", svg: "DSC_3094.svg", width: 6048, height: 4024 },
-  { src: "DSC_3484.jpg", svg: "DSC_3484.svg", width: 4024, height: 6048 },
-  { src: "DSC_3544.jpg", svg: "DSC_3544.svg", width: 6048, height: 4024 },
-  { src: "DSC_3637.jpg", svg: "DSC_3637.svg", width: 5848, height: 3891 },
-  { src: "DSC_3654.jpg", svg: "DSC_3654.svg", width: 6048, height: 4024 },
-  { src: "DSC_3686.jpg", svg: "DSC_3686.svg", width: 6048, height: 4024 },
-  { src: "DSC_3725.jpg", svg: "DSC_3725.svg", width: 4024, height: 6048 },
-  { src: "DSC_4179.jpg", svg: "DSC_4179.svg", width: 6048, height: 4024 },
-  { src: "DSC_4301.jpg", svg: "DSC_4301.svg", width: 6048, height: 4024 },
-  { src: "DSC_4374.jpg", svg: "DSC_4374.svg", width: 4672, height: 3738 },
-  { src: "DSC_4552.jpg", svg: "DSC_4552.svg", width: 5562, height: 3701 },
-  { src: "DSC_4591.jpg", svg: "DSC_4591.svg", width: 5722, height: 3807 },
-  {
-    src: "DSC_3949-HDR.jpg",
-    svg: "DSC_3949-HDR.svg",
-    width: 3963,
-    height: 5956,
-  },
-  {
-    src: "DSC_4040-HDR.jpg",
-    svg: "DSC_4040-HDR.svg",
-    width: 3924,
-    height: 5898,
-  },
-  {
-    src: "DSC_4230-HDR.jpg",
-    svg: "DSC_4230-HDR.svg",
-    width: 5960,
-    height: 3965,
-  },
-  {
-    src: "DSC_4260-HDR-Pano.jpg",
-    svg: "DSC_4260-HDR-Pano.svg",
-    width: 16010,
-    height: 6502,
-  },
-  {
-    src: "DSC_3242-HDR-2.jpg",
-    svg: "DSC_3242-HDR-2.svg",
-    width: 5894,
-    height: 3922,
-  },
-];
 
 const photoRender = ({
   photo,

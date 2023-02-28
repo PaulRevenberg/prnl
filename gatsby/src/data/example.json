@@ -1,0 +1,10 @@
+[
+  {
+    "height": 600,
+    "width": 400,
+    "type": "jpg",
+    "thumb": "URL_TO_THUMBNAIL",
+    "full": "URL_TO_FULL_SIZE",
+    "svg": "URL_TO_SVG"
+  }
+]
