@@ -70,7 +70,6 @@ const Gallery = () => {
 
   return (
     <div className="scrollbar-hide mx-auto h-full overflow-y-scroll xl:max-w-[120rem]">
-      {index}
       <PhotoAlbum
         renderPhoto={photoRender}
         layout="columns"
