@@ -7,7 +7,7 @@ import {
 import profile from "../images/profile.jpg";
 
 import * as React from "react";
-import { faCamera, faHouse, faImage } from "@fortawesome/free-solid-svg-icons";
+import { faImage } from "@fortawesome/free-solid-svg-icons";
 const Landing = () => {
   return (
     <div className="flex h-screen snap-start snap-always flex-col bg-red-500">
@@ -20,13 +20,13 @@ const Landing = () => {
           />
           <div className="mt-4 flex flex-col items-center pl-2 sm:items-start">
             <h1 className="text-3xl text-zinc-800">Paul Revenberg</h1>
-            <span className=" text-zinc-400">Software Developer</span>
+            <h2 className=" text-zinc-400">Software Developer</h2>
             <span className="flex gap-3 text-3xl">
               <a
                 href="https://www.linkedin.com/in/paul-revenberg-80b3b916b/"
                 target="_blank"
                 title="LinkedIn"
-                rel="noopener"
+                rel="noreferrer"
               >
                 <FontAwesomeIcon
                   icon={faLinkedin}
@@ -37,24 +37,24 @@ const Landing = () => {
                 href="https://github.com/PaulRevenberg"
                 target="_blank"
                 title="Github"
-                rel="noopener"
+                rel="noreferrer"
               >
                 <FontAwesomeIcon
                   icon={faGithub}
                   className=" transition-color text:black duration-300 hover:text-black md:text-zinc-600"
                 />
               </a>
-              {/* <a href="#gallery" title="Gallery" rel="noopener">
+              <a href="#gallery" title="Gallery" rel="noopener">
                 <FontAwesomeIcon
                   icon={faImage}
                   className=" transition-color text-black duration-300 hover:text-black md:text-zinc-600"
                 />
-              </a> */}
+              </a>
               <a
                 href="https://www.instagram.com/paul.revenberg/"
                 target="_blank"
                 title="Instagram"
-                rel="noopener"
+                rel="noreferrer"
               >
                 <FontAwesomeIcon
                   icon={faInstagram}

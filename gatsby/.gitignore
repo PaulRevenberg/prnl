@@ -107,3 +107,6 @@ dist
 public
 
 src/data/gallery.json
+
+.env.*
+!.env.example

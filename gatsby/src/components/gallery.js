@@ -41,25 +41,45 @@ const photoRender = ({
       ...style,
       width: "100%",
       padding: 0,
-      backgroundImage: `url(/${photo.svg})`,
+      // backgroundImage: `url(${photo.svg})`,
     }}
     {...restImageProps}
   />
 );
 
+const fullData = PhotoData.map((item) => {
+  return {
+    src: `${process.env.GATSBY_BUCKET_URL}/full/${item.id}.${item.full.type}`,
+    width: item.full.width,
+    height: item.full.height,
+    key: item.id,
+  };
+});
+
+const thumbData = PhotoData.map((item) => {
+  return {
+    src: `${process.env.GATSBY_BUCKET_URL}/thumb/${item.id}.${item.thumb.type}`,
+    svg: `${process.env.GATSBY_BUCKET_URL}/svg/${item.id}.${item.thumb.type}`,
+    ...item.thumb,
+    key: item.id,
+  };
+});
+
 const Gallery = () => {
   const [index, setIndex] = React.useState(-1);
+
   return (
     <div className="scrollbar-hide mx-auto h-full overflow-y-scroll xl:max-w-[120rem]">
+      {index}
       <PhotoAlbum
         renderPhoto={photoRender}
         layout="columns"
-        photos={photos}
+        photos={thumbData}
         onClick={({ index }) => setIndex(index)}
         // targetRowHeight={250}
       />
       <Lightbox
-        slides={photos}
+        slides={fullData}
         open={index >= 0}
         index={index}
         close={() => setIndex(-1)}

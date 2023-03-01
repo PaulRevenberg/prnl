@@ -1,11 +1,16 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
+console.log(process.env.NODE_ENV, process.env.GATSBY_BUCKET_URL);
 module.exports = {
   siteMetadata: {
-    title: `Paul Revenberg | Developer`,
+    title: `Paul Revenberg | Software Developer`,
     siteUrl: `https://www.paulrevenberg.nl`,
-    description: "Paul Revenberg | Developer | Photo gallery",
+    description: "Paul Revenberg | Software Developer | Photo gallery",
   },
   plugins: [
     "gatsby-plugin-sass",
@@ -13,7 +18,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "Paul Revenberg | Developer",
+        name: "Paul Revenberg | Software Developer",
         short_name: "Paul",
         start_url: "/",
         background_color: "#FAFAFA",

@@ -5,9 +5,7 @@ const SEO = ({ title, description, pathname, children }) => {
   const {
     title: defaultTitle,
     description: defaultDescription,
-    image,
     siteUrl,
-    twitterUsername,
   } = useSiteMetadata();
 
   const seo = {
