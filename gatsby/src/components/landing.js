@@ -20,7 +20,9 @@ const Landing = () => {
           />
           <div className="mt-4 flex flex-col items-center pl-2 sm:items-start">
             <h1 className="text-3xl text-zinc-800">Paul Revenberg</h1>
-            <h2 className=" text-zinc-400">Software Developer</h2>
+            <h2 className=" text-zinc-400">
+              Software Developer | Photographer
+            </h2>
             <span className="flex gap-3 text-3xl">
               <a
                 href="https://www.linkedin.com/in/paul-revenberg-80b3b916b/"
@@ -67,7 +69,7 @@ const Landing = () => {
         <div className="flex flex-col gap-4  landscape:aspect-[4/6] ">
           <div className="fake-img landscape:rounded-bl-md"></div>
           <img
-            src="https://dxurxb3qmablc.cloudfront.net/3450.jpg"
+            src="https://dxurxb3qmablc.cloudfront.net/landing.jpg"
             alt=""
             className="aspect-[4/3] landscape:rounded-l-md"
           />

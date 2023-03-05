@@ -31,17 +31,23 @@ import "yet-another-react-lightbox/plugins/thumbnails.css";
 //   };
 // });
 
+const missingIcon =
+  "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L3N2Zz4K";
+
 const photoRender = ({
   photo,
   imageProps: { alt, style, ...restImageProps },
 }) => (
   <img
     alt={alt}
+    onError={(e) => {
+      e.target.src = `data:image/svg+xml;base64,${missingIcon}`;
+    }}
     style={{
       ...style,
       width: "100%",
       padding: 0,
-      // backgroundImage: `url(${photo.svg})`,
+      backgroundImage: `url('data:image/svg+xml;base64,${photo.svg}')`,
     }}
     {...restImageProps}
   />
@@ -49,7 +55,7 @@ const photoRender = ({
 
 const fullData = PhotoData.map((item) => {
   return {
-    src: `${process.env.GATSBY_BUCKET_URL}/full/${item.id}.${item.full.type}`,
+    src: `${process.env.GATSBY_CLOUDFRONT_URL}/full/${item.id}.${item.full.type}`,
     width: item.full.width,
     height: item.full.height,
     key: item.id,
@@ -58,8 +64,8 @@ const fullData = PhotoData.map((item) => {
 
 const thumbData = PhotoData.map((item) => {
   return {
-    src: `${process.env.GATSBY_BUCKET_URL}/thumb/${item.id}.${item.thumb.type}`,
-    svg: `${process.env.GATSBY_BUCKET_URL}/svg/${item.id}.${item.thumb.type}`,
+    src: `${process.env.GATSBY_CLOUDFRONT_URL}/thumb/${item.id}.${item.thumb.type}`,
+    svg: item.svg,
     ...item.thumb,
     key: item.id,
   };

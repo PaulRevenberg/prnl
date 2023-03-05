@@ -10,7 +10,7 @@ module.exports = {
   siteMetadata: {
     title: `Paul Revenberg | Software Developer`,
     siteUrl: `https://www.paulrevenberg.nl`,
-    description: "Paul Revenberg | Software Developer | Photo gallery",
+    description: "Paul Revenberg | Software Developer | Photographer",
   },
   plugins: [
     "gatsby-plugin-sass",
